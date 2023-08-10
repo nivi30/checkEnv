@@ -7,16 +7,16 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - name: Set the value
-        id: step_one
-        run: |
-          echo "action_state=yellow" >> $GITHUB_ENV
-          echo "${{ env.action_state }}"
-      - if: ${{ env.action_state == "yellow" }}
-        name: Use the value
-        id: step_two
-        run: |
-          echo "${{ env.action_state }}
+#       - name: Set the value
+#         id: step_one
+#         run: |
+#           echo "action_state=yellow" >> $GITHUB_ENV
+#           echo "${{ env.action_state }}"
+#       - if: ${{ env.action_state == "yellow" }}
+#         name: Use the value
+#         id: step_two
+#         run: |
+#           echo "${{ env.action_state }}
       - name: check env
         run: | 
           echo "React_App_Cond="false" > .env
