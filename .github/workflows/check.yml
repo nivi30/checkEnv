@@ -25,7 +25,7 @@ jobs:
         run: cat .env
       - name: check-double
         run: |
-          if grep - q "React_App_Cond=\"false\"" .env && grep -q "React_App_PSD=\"Hello\"" .env; then
+          if grep -q "React_App_Cond=\"false\"" .env && grep -q "React_App_PSD=\"Hello\"" .env; then
             echo "both"
           else 
             echo "one"
